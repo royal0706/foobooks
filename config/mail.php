@@ -2,6 +2,7 @@
 
 return [
 
+    'supportEmail' => 'victoria_royal@harvard.edu',
     /*
     |--------------------------------------------------------------------------
     | Mail Driver

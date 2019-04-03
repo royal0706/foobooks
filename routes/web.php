@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
+Route::get('/books', 'BookController@index');
+Route::get('/books/{title}', 'BookController@show');
 
-Route::get('/a/b/c', function () {
-    return 'ABC';
-});
-
-Route::get('/example', function () {
-    return view('abc');
-});
+/**
+ * Practice
+ */
+Route::any('/practice/{n?}', 'PracticeController@index');
+# Example routes from the discussion of P3 development (Week 6, Part 8 video)
+//Route::get('/', 'TriviaController@index');
+//Route::get('/check-answer', 'TriviaController@checkAnswer');
